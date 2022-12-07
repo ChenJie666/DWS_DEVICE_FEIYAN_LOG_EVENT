@@ -1,3 +1,4 @@
+```
 CREATE TABLE compass_device_dev.dws_device_feiyan_log_event (
     `productkey` varchar(100) NULL COMMENT "",
     `iotid` varchar(255) NULL COMMENT "",
@@ -24,6 +25,8 @@ CREATE TABLE device_model_log.dws_device_feiyan_log_event (
     `cnt` bigint NULL COMMENT "",
 	PRIMARY KEY(ds,iotId,eventName,optId)
 ) ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT '飞燕设备日志日统计表';
+```
 
-
+```
 ./flink run -m yarn-cluster -ynm DWS_DEVICE_FEIYAN_LOG_EVENT -p 3 -ys 3 -yjm 1024 -ytm 2000m -d -c com.iotmars.compass.DeviceLogApp -yqu default /opt/jar/DWS_DEVICE_FEIYAN_LOG_EVENT-1.0-SNAPSHOT.jar
+```
