@@ -34,7 +34,7 @@ public class DeviceLogApp {
         env.setStateBackend(new EmbeddedRocksDBStateBackend());
 
         System.setProperty("HADOOP_USER_NAME", "root");
-        env.getCheckpointConfig().setCheckpointStorage("hdfs://192.168.101.193:8020/flink/checkpoint/dwd_device_feiyan_log_event");
+        env.getCheckpointConfig().setCheckpointStorage("hdfs://192.168.101.193:8020/flink/checkpoint/DWS_DEVICE_FEIYAN_LOG_EVENT");
 
         StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env);
         TableConfig config = tableEnv.getConfig();
